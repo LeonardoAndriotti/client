@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 import com.carrer.client.validate.ValidationMessages;
 
 @Entity
-@Table(name = "order")
+@Table(name = "carrer")
 public class Carrer implements Serializable {
 
 	private static final long serialVersionUID = 1L;

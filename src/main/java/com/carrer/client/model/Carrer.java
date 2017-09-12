@@ -24,13 +24,13 @@ public class Carrer implements Serializable {
 
 	@NotNull(message = ValidationMessages.MESSAGE_QUANT_NOT_NULL)
 	private BigDecimal quant;
-
+	@NotNull(message = ValidationMessages.MESSAGE_FIELD_NOT_NULL)
 	private BigDecimal iduser;
-
+	@NotNull(message = ValidationMessages.MESSAGE_FIELD_NOT_NULL)
 	private BigDecimal idproduto;
-
+	@NotNull(message = ValidationMessages.MESSAGE_PRECO_NOT_NULL)
 	private BigDecimal preco;
-
+	
 	public BigDecimal getId() {
 		return id;
 	}

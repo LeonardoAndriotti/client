@@ -11,9 +11,9 @@ import com.carrer.client.model.Carrer;
 
 public interface CarrerRepository extends JpaRepository<Carrer, BigDecimal>{
 	
-	public static final String FIND_ORDER_BY_LAST_DAYS = "SELECT * "
-			+ "FROM order WHERE :data < current_date";
+	public static final String FIND_ORDER_BY_LAST_DAYS = "SELECT '*' "+ 
+			" FROM Carrer WHERE :data < current_date";
 	
-	@Query(CarrerRepository.FIND_ORDER_BY_LAST_DAYS)
+	@Query(FIND_ORDER_BY_LAST_DAYS)
 	List<Carrer> findOrdeByDateInteval(Date data);
 }

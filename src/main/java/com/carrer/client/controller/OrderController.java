@@ -1,5 +1,6 @@
 package com.carrer.client.controller;
 
+
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -10,37 +11,41 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.carrer.client.model.Carrer;
-import com.carrer.client.repository.CarrerRepository;
+import com.carrer.client.model.Order;
+import com.carrer.client.repository.OrderRepository;
+
 
 @Controller
-public class CarrerController {
-	
+public class OrderController {
+
 	@Autowired
-	private CarrerRepository repository;
+ 	private OrderRepository repository;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public List<Carrer> findAllCarrers() {
+	public List<Order> findAllOrders(){
 		return repository.findAll();
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public Carrer findCarrer(@RequestBody BigDecimal id){
+	public Order findOrder(@RequestBody BigDecimal id){
 		return repository.findOne(id);
 	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-	public void saveCarrerInApplication(@RequestBody Carrer carrer){
-		repository.save(carrer);
+	public void saveOrderInApplication(@RequestBody Order order){
+		repository.save(order);
 	}
-
+	
 	@RequestMapping(value = "/", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
-	public void update(@RequestBody Carrer carrer) {
-		repository.saveAndFlush(carrer);
+	public void update(@RequestBody Order order) {
+		repository.saveAndFlush(order);
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public void delete(@RequestBody BigDecimal id) {
 		repository.delete(id);
 	}
+	
 }
+
+

@@ -21,7 +21,6 @@ public class Carrer implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private BigDecimal id;
-
 	@NotNull(message = ValidationMessages.MESSAGE_QUANT_NOT_NULL)
 	private BigDecimal quant;
 	@NotNull(message = ValidationMessages.MESSAGE_FIELD_NOT_NULL)

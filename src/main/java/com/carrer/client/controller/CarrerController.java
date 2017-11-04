@@ -5,9 +5,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.carrer.client.model.Carrer;
@@ -25,7 +27,7 @@ public class CarrerController {
 	}
 
 	@RequestMapping(value = "/carrer/{id}", method = RequestMethod.GET)
-	public Carrer findCarrer(@RequestBody BigDecimal id) {
+	public Carrer findCarrer(@PathVariable BigDecimal id) {
 		return repository.findOne(id);
 	}
 
@@ -40,7 +42,12 @@ public class CarrerController {
 	}
 
 	@RequestMapping(value = "/carrer/{id}", method = RequestMethod.DELETE)
-	public void delete(@RequestBody BigDecimal id) {
+	public void delete(@PathVariable BigDecimal id) {
 		repository.delete(id);
+	}
+	
+	@RequestMapping(value = "/carrer/preco/{precoInicial}/{precoFinal}", method = RequestMethod.GET)
+	public List<Carrer> findCarrersByPrice(@PathVariable BigDecimal precoInicial, @PathVariable BigDecimal precoFinal){
+		return repository.findCarrerByPrice(precoInicial, precoFinal);
 	}
 }

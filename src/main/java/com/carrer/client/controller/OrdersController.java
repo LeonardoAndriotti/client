@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +29,7 @@ public class OrdersController {
 	}
 
 	@RequestMapping(value = "/orders/{id}", method = RequestMethod.GET)
-	public Orders findOrder(@RequestBody BigDecimal id) {
+	public Orders findOrder(@PathVariable BigDecimal id) {
 		return repository.findOne(id);
 	}
 
@@ -43,12 +44,12 @@ public class OrdersController {
 	}
 
 	@PutMapping(value = "/orders/{id}/{status}")
-	public void statusUpdate(@RequestParam("id") BigDecimal id, @RequestParam("status") String status) {
+	public void statusUpdate(@PathVariable BigDecimal id, @PathVariable String status) {
 		repository.updateOrderStatus(id, status);
 	}
 
 	@RequestMapping(value = "/orders/{id}", method = RequestMethod.DELETE)
-	public void delete(@RequestBody BigDecimal id) {
+	public void delete(@PathVariable BigDecimal id) {
 		repository.delete(id);
 	}
 

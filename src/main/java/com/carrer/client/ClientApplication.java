@@ -1,4 +1,4 @@
-package com.order.client;
+package com.carrer.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

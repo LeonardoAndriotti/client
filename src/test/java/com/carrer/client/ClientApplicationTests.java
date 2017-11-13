@@ -1,4 +1,4 @@
-package com.order.client;
+package com.carrer.client;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

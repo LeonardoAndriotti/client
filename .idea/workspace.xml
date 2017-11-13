@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c996b6-e84e-47ca-b81d-bab4eaa35553" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.order/client/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.order/client/pom.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/carrer/client/ClientApplication.class" afterPath="$PROJECT_DIR$/target/classes/com/carrer/client/ClientApplication.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/carrer/client/DTO/CarrerDTO.class" afterPath="$PROJECT_DIR$/target/classes/com/carrer/client/DTO/CarrerDTO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/carrer/client/DTO/OrdersDTO$StatusType.class" afterPath="$PROJECT_DIR$/target/classes/com/carrer/client/DTO/OrdersDTO$StatusType.class" />
@@ -17,11 +14,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/carrer/client/repository/OrdersRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/carrer/client/repository/OrdersRepository.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/carrer/client/validate/ValidationMessages.class" afterPath="$PROJECT_DIR$/target/classes/com/carrer/client/validate/ValidationMessages.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/carrer/client/ClientApplicationTests.class" afterPath="$PROJECT_DIR$/target/test-classes/com/carrer/client/ClientApplicationTests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/carrer/client/model/Orders.java" afterPath="$PROJECT_DIR$/src/main/java/com/carrer/client/model/Orders.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -358,12 +351,20 @@
       <updated>1509499510340</updated>
       <workItem from="1509499514403" duration="416000" />
       <workItem from="1509638587369" duration="1111000" />
-      <workItem from="1510610934513" duration="1174000" />
+      <workItem from="1510610934513" duration="1206000" />
     </task>
+    <task id="LOCAL-00001" summary="api de produto">
+      <created>1510612129181</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1510612129181</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2701000" />
+    <option name="totallyTimeSpent" value="2733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -404,6 +405,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="api de produto" />
+    <option name="LAST_COMMIT_MESSAGE" value="api de produto" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

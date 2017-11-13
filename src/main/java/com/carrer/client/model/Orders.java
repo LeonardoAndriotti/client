@@ -25,9 +25,9 @@ public class Orders implements Serializable {
 	@NotNull(message = ValidationMessages.MESSAGE_FIELD_NOT_NULL)
 	private BigDecimal idcarrier;
 	@NotNull(message = ValidationMessages.MESSAGE_FIELD_NOT_NULL)
-	private Date datacriacao;
+	private String datacriacao;
 	@NotNull(message = ValidationMessages.MESSAGE_FIELD_NOT_NULL)
-	private Date datafinalizado;
+	private String datafinalizado;
 	@NotNull(message = ValidationMessages.MESSAGE_FIELD_NOT_NULL)
 	private String status;
 
@@ -47,19 +47,19 @@ public class Orders implements Serializable {
 		this.idcarrier = idcarrier;
 	}
 
-	public Date getDatacriacao() {
+	public String getDatacriacao() {
 		return datacriacao;
 	}
 
-	public void setDatacriacao(Date datacriacao) {
+	public void setDatacriacao(String datacriacao) {
 		this.datacriacao = datacriacao;
 	}
 
-	public Date getDatafinalizado() {
+	public String getDatafinalizado() {
 		return datafinalizado;
 	}
 
-	public void setDatafinalizado(Date datafinalizado) {
+	public void setDatafinalizado(String datafinalizado) {
 		this.datafinalizado = datafinalizado;
 	}
 

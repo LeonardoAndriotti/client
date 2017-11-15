@@ -1,19 +1,21 @@
 package com.carrer.client.repository;
 
+import com.carrer.client.model.Orders;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.math.BigDecimal;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.web.bind.annotation.RequestParam;
+public interface OrdersRepository extends JpaRepository<Orders, BigDecimal> {
 
-import com.carrer.client.model.Orders;
+    String UPDATE_ORDER_STATUS = "update orders " +
+            " set status=:status WHERE id=:id ";
 
-public interface OrdersRepository extends JpaRepository<Orders, BigDecimal> {	
-	
-	public static final String UPDATE_ORDER_STATUS = "update Orders " + 
-				" set status=:status WHERE id=:id ";
-
-	
-	@Query(UPDATE_ORDER_STATUS)
-	void updateOrderStatus(@RequestParam("id")BigDecimal id,@RequestParam("status") String status);
+    @Modifying
+    @Transactional
+    @Query(value = UPDATE_ORDER_STATUS, nativeQuery = true)
+    void updateOrderStatus(@Param("id") BigDecimal id, @Param("status") String status);
 }

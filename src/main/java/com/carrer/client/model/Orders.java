@@ -22,8 +22,10 @@ public class Orders implements Serializable {
     private String datacriacao;
     @NotNull(message = ValidationMessages.MESSAGE_FIELD_NOT_NULL)
     private String datafinalizado;
+    private String amount;
     @NotNull(message = ValidationMessages.MESSAGE_FIELD_NOT_NULL)
     private String status;
+    private BigDecimal idUser;
 
     public BigDecimal getId() {
         return id;
@@ -65,4 +67,19 @@ public class Orders implements Serializable {
         this.status = status;
     }
 
+    public String getAmount() {
+        return amount;
+    }
+
+    public void setAmount(String amount) {
+        this.amount = amount;
+    }
+
+    public BigDecimal getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(BigDecimal idUser) {
+        this.idUser = idUser;
+    }
 }

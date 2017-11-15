@@ -27,6 +27,15 @@ public class OrdersController {
         return repository.findOne(id);
     }
 
+    @RequestMapping(value = "/orders/carrer/{idCart}", method = RequestMethod.GET)
+    public List<Orders> findByOrderForIdCart(@PathVariable BigDecimal idCart) {
+        return repository.findByIdcarrier(idCart);
+    }
+    @RequestMapping(value = "/orders/user/{idUser}", method = RequestMethod.GET)
+    public List<Orders> findByOrderForIdUser(@PathVariable BigDecimal idUser) {
+        return repository.findByIdUser(idUser);
+    }
+
     @RequestMapping(value = "/orders/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public void saveOrderInApplication(@RequestBody Orders orders) {
         repository.save(orders);

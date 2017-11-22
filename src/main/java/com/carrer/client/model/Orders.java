@@ -25,6 +25,7 @@ public class Orders implements Serializable {
     private String amount;
     @NotNull(message = ValidationMessages.MESSAGE_FIELD_NOT_NULL)
     private String status;
+
     private BigDecimal idUser;
 
     public BigDecimal getId() {

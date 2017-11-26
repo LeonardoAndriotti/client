@@ -1,62 +1,52 @@
 package com.carrer.client.DTO;
 
-import java.math.BigDecimal;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.math.BigDecimal;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CarrerDTO {
 
-	@JsonProperty("id")
-	private BigDecimal id;
-	@JsonProperty("quant")
-	private BigDecimal quant;
-	@JsonProperty("iduser")
-	private BigDecimal iduser;
-	@JsonProperty("idproduto")
-	private BigDecimal idproduto;
-	@JsonProperty("preco")
-	private BigDecimal preco;
+    @JsonProperty("id")
+    private BigDecimal id;
+    @JsonProperty("quantidade")
+    private BigDecimal quantidade;
+    @JsonProperty("idUser")
+    private BigDecimal idUser;
+    @JsonProperty("idProduto")
+    private BigDecimal idProduto;
 
-	public BigDecimal getId() {
-		return id;
-	}
+    public BigDecimal getId() {
+        return id;
+    }
 
-	public void setId(BigDecimal id) {
-		this.id = id;
-	}
+    public void setId(BigDecimal id) {
+        this.id = id;
+    }
 
-	public BigDecimal getQuant() {
-		return quant;
-	}
+    public BigDecimal getQuantidade() {
+        return quantidade;
+    }
 
-	public void setQuant(BigDecimal quant) {
-		this.quant = quant;
-	}
+    public void setQuantidade(BigDecimal quantidade) {
+        this.quantidade = quantidade;
+    }
 
-	public BigDecimal getIduser() {
-		return iduser;
-	}
+    public BigDecimal getIdUser() {
+        return idUser;
+    }
 
-	public void setIduser(BigDecimal iduser) {
-		this.iduser = iduser;
-	}
+    public void setIdUser(BigDecimal idUser) {
+        this.idUser = idUser;
+    }
 
-	public BigDecimal getIdproduto() {
-		return idproduto;
-	}
+    public BigDecimal getIdProduto() {
+        return idProduto;
+    }
 
-	public void setIdproduto(BigDecimal idproduto) {
-		this.idproduto = idproduto;
-	}
-
-	public BigDecimal getPreco() {
-		return preco;
-	}
-
-	public void setPreco(BigDecimal preco) {
-		this.preco = preco;
-	}
+    public void setIdProduto(BigDecimal idProduto) {
+        this.idProduto = idProduto;
+    }
 
 }
